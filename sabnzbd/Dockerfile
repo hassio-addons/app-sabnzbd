@@ -18,7 +18,7 @@ RUN \
     linux-headers=6.16.12-r0 \
     musl-dev=1.2.5-r21 \
     py3-pip=25.1.1-r1 \
-    python3-dev=3.12.12-r0 \
+    python3-dev=3.12.13-r0 \
   \
   && apk add --no-cache \
     7zip=25.01-r0 \
