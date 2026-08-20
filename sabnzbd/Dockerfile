@@ -12,19 +12,19 @@ ARG PAR2CMDLINE_TURBO_VERSION=f94ea31ecce17d19f6931a58c1719a25758ae3a0
 # hadolint ignore=DL3003,DL3042
 RUN \
   apk add --no-cache --virtual .build-dependencies \
-    autoconf=2.72-r1 \
-    automake=1.18.1-r0 \
-    build-base=0.5-r3 \
-    linux-headers=6.16.12-r0 \
-    musl-dev=1.2.5-r23 \
-    py3-pip=25.1.1-r1 \
-    python3-dev=3.12.13-r0 \
+    autoconf=2.73-r0 \
+    automake=1.18.1-r1 \
+    build-base=0.5-r4 \
+    linux-headers=7.0.0-r1 \
+    musl-dev=1.2.6-r2 \
+    py3-pip=26.1.2-r0 \
+    python3-dev=3.14.7-r1 \
   \
   && apk add --no-cache \
-    7zip=25.01-r0 \
-    nginx=1.28.3-r7 \
-    py3-setuptools=80.9.0-r2 \
-    python3=3.12.13-r0 \
+    7zip=26.01-r0 \
+    nginx=1.30.4-r1 \
+    py3-setuptools=82.0.1-r1 \
+    python3=3.14.7-r1 \
     unzip=6.0-r16 \
   \
   && curl -J -L -o /tmp/unrar.tar.gz \
