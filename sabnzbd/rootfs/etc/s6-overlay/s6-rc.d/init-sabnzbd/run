@@ -10,4 +10,10 @@ if ! bashio::fs.file_exists '/config/sabnzbd.ini'; then
         /media/sabnzbd/Downloads/complete \
         /media/sabnzbd/Downloads/incomplete
     ln -s /media/sabnzbd/Downloads /config/Downloads
+    printf '[misc]\nurl_base = /sabnzbd\n' > /config/sabnzbd.ini
+fi
+
+# SABnzbd 4.4.0+ defaults url_base to empty, but Ingress serves it on /sabnzbd
+if grep -q '^url_base = ""$' /config/sabnzbd.ini; then
+    sed -i 's|^url_base = ""$|url_base = /sabnzbd|' /config/sabnzbd.ini
 fi
